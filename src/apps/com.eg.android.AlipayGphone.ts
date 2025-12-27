@@ -11,7 +11,6 @@ export default defineGkdApp({
       rules: [
         {
           matches: '[text="确认不选择"]', // 核心：匹配文字内容
-          snapshotUrls: '', // 如果有快照链接可以填这里，没有留空
         },
       ],
     },
