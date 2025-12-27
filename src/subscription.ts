@@ -6,8 +6,8 @@ import globalGroups from './globalGroups';
 export default defineGkdSubscription({
   id: 885,
   name: 'Subscription',
-  version: 0,
-  author: 'author',
+  version: 2,
+  author: 'kano',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/gkd-kit/subscription-template',
   categories,
