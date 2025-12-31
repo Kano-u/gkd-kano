@@ -4,7 +4,7 @@ import { defineGkdApp } from '@gkd-kit/define';
 // 搜索"功能类-支付后自动点击完成"
 
 export default defineGkdApp({
-  id: 'world.letsgo.booster.android.pages.home.HomeActivity',
+  id: 'world.letsgo.booster.android.pro',
   name: '快连 VPN',
   groups: [
     {
