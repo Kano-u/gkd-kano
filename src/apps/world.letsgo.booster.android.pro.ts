@@ -11,14 +11,25 @@ export default defineGkdApp({
       key: 0,
       name: '快快收下+开启快连',
       fastQuery: true,
+      activityIds: ['world.letsgo.booster.android.pages.home.HomeActivity'],
       rules: [
         {
-          activityIds: ['world.letsgo.booster.android.pages.home.HomeActivity'],
-          matches: ['[text="快快收下"]', '[text="开启快连"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/24390652',
-            'https://i.gkd.li/i/24390653',
-          ],
+          key: 10, // 第一步的唯一ID
+          name: '第一步-点击快快收下',
+          // 匹配 Button 且文本为"快快收下"
+          matches: 'Button[text="快快收下"]',
+          // 也可以用更通用的写法: '[text="快快收下"]'
+          snapshotUrls: 'https://i.gkd.li/i/24390652',
+        },
+        {
+          preKeys: [10], // 关键点：指定必须先执行 key 10
+          key: 11, // 第二步的唯一ID
+          name: '第二步-点击开启快连',
+          // 匹配 TextView 且文本为"开启快连"
+          matches: 'TextView[text="开启快连"]',
+          // 建议加上延迟，防止页面未刷新就检测
+          actionDelay: 500, // 单位毫秒，可根据实际情况调整
+          snapshotUrls: 'https://i.gkd.li/i/24390653',
         },
       ],
     },
