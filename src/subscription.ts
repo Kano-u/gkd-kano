@@ -5,8 +5,8 @@ import globalGroups from './globalGroups';
 
 export default defineGkdSubscription({
   id: 885,
-  name: 'Subscription',
-  version: 4,
+  name: 'Kano的订阅规则',
+  version: 5,
   author: 'kano',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/gkd-kit/subscription-template',
