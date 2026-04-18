@@ -55,7 +55,9 @@ export default defineGkdApp({
       rules: [
         {
           // 优先尝试点击包含该文本的可点击父元素
-          matches: '@[clickable=true] > [text="启动洗衣"]',
+          // matches: '@[clickable=true] > [text="启动洗衣"]',
+          // 备注：以上代码无法生效，猜测是 @[clickable=true] 属性无效
+          matches: '[text="启动洗衣"]',
           snapshotUrls: ['https://i.gkd.li/i/24352824'],
         },
       ],
